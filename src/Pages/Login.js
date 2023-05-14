@@ -5,6 +5,7 @@ import "firebase/compat/firestore";
 import { firebaseConfig } from "../firebase";
 import "../Styles/Login.css";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 const Login = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [verificationId, setVerificationId] = useState("");
@@ -29,10 +30,11 @@ const Login = () => {
       .then((id) => {
         setVerificationId(id);
         setIsBtnDisable(true);
-      })
+        toast("Verification Code is sent on phone");     
+       })
       .catch((error) => {
         if (error.code === "auth/too-many-requests") {
-          alert("Too many sign-in attempts. Please try again later.");
+          toast("Too many sign-in attempts. Please try again later.");
         } else {
           console.log(error);
         }
