@@ -30,7 +30,8 @@ const Login = () => {
       .then((id) => {
         setVerificationId(id);
         setIsBtnDisable(true);
-        toast("Verification Code is sent on phone");     
+        toast("Verification Code is sent on phone");    
+        setPhoneNumber('') 
        })
       .catch((error) => {
         if (error.code === "auth/too-many-requests") {

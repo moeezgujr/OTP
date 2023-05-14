@@ -1,57 +1,58 @@
 /* Container for the login form */
 .login {
-    width: 400px;
-    margin: auto;
-    margin-top: 50px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 50px;
-    text-align: center;
-  }
-  
-  /* Header for the login form */
-  .login h1 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  /* Form group */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  /* Label for the form group */
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  /* Input for the form group */
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-  }
-  
-  /* Submit button */
-  button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  /* Submit button hover */
-  button[type="submit"]:hover {
-    background-color: #3e8e41;
-  }
-  
+  width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 50px;
+  text-align: center;
+}
+
+/* Header for the login form */
+.login h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Label for the form group */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Input for the form group */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Submit button hover */
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
