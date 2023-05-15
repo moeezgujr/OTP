@@ -72,6 +72,23 @@ const Login = () => {
     setPhoneNumber(e.target.value);
     setIsBtnDisable(false);
   };
+  async function sendSMS() {
+    try {
+      const response = await fetch('https://sparkly-smakager-b7df7a.netlify.app/.netlify/functions/api/send-sms', {
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error('There was an error fetching the data:', error);
+    }
+  }
   return (
     <div className="login">
       <h1>Login</h1>
@@ -107,6 +124,8 @@ const Login = () => {
         </div>
         <button type="submit">Verify Code</button>
       </form>
+      <button className="sendbulksms" onClick={sendSMS} >Send Bulk Sms</button>
+
     </div>
   );
 };
